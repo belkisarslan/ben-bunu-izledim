@@ -1,13 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import '../App.css'
 
 const Header = () => {
     return (
         <>
-            <nav class="navbar navbar-light bg-light static-top">
-                <div class="container">
-                    <a class="navbar-brand" href="#!">Ben Bunu İzledim!</a>
-                    <div>İzlenecekler</div>
-                    <div>İzlenenler</div>
+            <nav className="navbar navbar-light bg-light static-top">
+                <div className="container">
+                    <a className="navbar-brand" href="#!">Ben Bunu İzledim!</a>
+                    <div className='brand'>
+                        <Link to={"/"}>İzlenecekler</Link>
+                    </div>
+                    <ul className='nav-links'>
+                        <li>
+                            <Link to={"/Watched"}>İzlenenler</Link>
+                        </li>
+                        <li>
+                            <Link to={"/Add"}><span className="material-symbols-outlined">
+                                note_add
+                            </span></Link>
+                        </li>
+                    </ul>
                 </div>
             </nav>
             <header className='masthead'>
@@ -20,8 +33,8 @@ const Header = () => {
                                     <div className='col'>
                                         <input className="form-control form-control-lg" type="text" />
                                     </div>
-                                    <div class="col-auto">
-                                        <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Ara</button>
+                                    <div className="col-auto">
+                                        <button className="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Ara</button>
                                     </div>
                                 </div>
                             </div>

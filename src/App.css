@@ -28,3 +28,37 @@ header.masthead {
       font-size: 3rem;
     }
   }
+
+  
+  .navbar-brand{
+    color: #1c375e
+  }
+  
+  .nav-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-right: 30px;
+    text-decoration: none;
+    color:#1c375e;
+  }
+  
+  .nav-links li a{
+    text-decoration: none;
+    color: #1c375e;
+  }
+
+  .brand a {
+    text-decoration: none;
+    color: #1c375e;
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
