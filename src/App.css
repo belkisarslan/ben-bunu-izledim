@@ -62,3 +62,9 @@ header.masthead {
   .nav-links li:last-child {
     margin-right: 0;
   }
+
+  
+
+  .result-card img{
+    border-radius: 8px;
+  }
