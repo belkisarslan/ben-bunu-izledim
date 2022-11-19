@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../context/GlobalState'
 
 const ResultCard = ({ movie }) => {
-  console.log(movie)
+  const{addMovieToWatchList} = useContext(GlobalContext)
   const style = {
     display: "flex",
     marginTop: "50px"
@@ -18,16 +19,20 @@ const ResultCard = ({ movie }) => {
           <div style={style}><p>Görsel silinmiş ya da kaldırılmış olabilir</p></div>
         )}
       </div>
-      <div class="card-body p-4">
-        <div class="text-center">
-          <h5 class="fw-bolder">{movie.title}</h5>
-          <h6 class="text-muted fst-italic  mb-2">IMDB: {movie.vote_average}</h6>
+      <div className="card-body p-4">
+        <div className="text-center">
+          <h5 className="fw-bolder">{movie.title}</h5>
+          <h6 className="text-muted fst-italic  mb-2">IMDB: {movie.vote_average}</h6>
         </div>
       </div>
 
-      <div class="d-flex justify-content-between card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div><button class="btn btn-outline-dark mt-auto" href="#">İzledim</button></div>
-        <div><button class="btn btn-outline-secondary mt-auto" href="#">İzleyeceğim</button></div>
+      <div className="d-flex justify-content-between card-footer p-4 pt-0 border-top-0 bg-transparent">
+        <div>
+          <button className="btn btn-outline-dark mt-auto" href="#">İzledim</button>
+        </div>
+        <div>
+          <button onClick={()=>addMovieToWatchList(movie)} className="btn btn-outline-secondary mt-auto">İzleyeceğim</button>
+        </div>
       </div>
     </>
   )

@@ -37,13 +37,13 @@ const Add = () => {
         </div>
 
       </header >
-      <section class="features-icons bg-light text-center pt-4">
-        <div class="container">
+      <section className="features-icons bg-light text-center pt-4">
+        <div className="container">
          {results.length > 0 && (
-          <div class="row">
+          <div className="row">
             {results.map((movie) =>(
-              <div class="col-lg-4">
-              <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 border border-secondary p-4 rounded">
+              <div key={movie.id} className="col-lg-4">
+              <div key={movie.id} className="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 border border-secondary p-4 rounded">
                 <h3 key={movie.id}>
                   <ResultCard movie={movie}/>
                 </h3>
