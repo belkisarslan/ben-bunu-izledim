@@ -79,3 +79,59 @@ header.masthead {
   .features-icons .cards{
     background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);
   }
+
+  /* Home */
+
+  .page-section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  .clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .intro {
+    position: relative;
+  }
+  .intro .intro-text{
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    color: #fff;
+  }
+  @media (min-width: 992px) {
+    .intro .intro-img {
+      width: 75%;
+      float: right;
+    }
+    .intro .intro-text {
+      left: 0;
+      width: 60%;
+      margin-top: 3rem;
+      position: absolute;
+     
+    }
+    .intro .intro-text .intro-button {
+      width: 100%;
+      left: 0;
+      position: absolute;
+      bottom: -2rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    .intro .intro-text {
+      width: 45%;
+    }
+  }
+
+  .section-heading .section-heading-upper {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .section-heading .section-heading-lower {
+    display: block;
+    font-size: 3rem;
+    font-weight: 100;
+  }
