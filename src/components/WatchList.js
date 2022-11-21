@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
+import "../App.css"
 
 const WatchList = () => {
   const { watchList } = useContext(GlobalContext)
@@ -9,7 +10,7 @@ const WatchList = () => {
   }
   return (
     <>
-      <header className="bg-dark py-5">
+      <header className="py-5">
         <div className="container px-4 px-lg-5 my-5">
           <div className="text-center text-white">
             <h1 className="display-4 fw-bolder">İzlenecekler</h1>
@@ -17,13 +18,13 @@ const WatchList = () => {
           </div>
         </div>
       </header>
-      <section className="features-icons bg-light text-center pt-4 ">
-        <div className="container">
+      <section className="features-icons bg- light text-center d-flex justify-content-around ">
+        <div>
           {watchList.length > 0 ? (
-            <div className="row">
+            <div className="row cards-row">
               {watchList.map((movie) => (
 
-                <div className="col-lg-4 border border-secondary rounded mb-4 p-4">
+                <div className="cards col-lg-3 border border-secondary rounded m-4 p-3 ">
                   <div className="card-body">
                     <div className="text-center">
                       <h5 className="fw-bolder">{movie.title}</h5>

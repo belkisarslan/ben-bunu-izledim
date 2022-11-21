@@ -5,6 +5,7 @@ import WatchList from './components/WatchList';
 import Watched from './components/Watched';
 import Add from './components/Add';
 import { GlobalProvider } from './context/GlobalState';
+import Home from './components/Home';
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
     <Router>
       <Header/>
       <Routes>
-        <Route path="/" element={<WatchList/>}/>
+      <Route path="/" element={<Home/>}/>
+        <Route path="/WatchList" element={<WatchList/>}/>
         <Route path="/Watched" element={<Watched/>}/>
         <Route path="/Add" element={<Add/>}/>
       </Routes>

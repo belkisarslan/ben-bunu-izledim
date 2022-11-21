@@ -6,11 +6,11 @@ const Header = () => {
    
     return (
         <>
-            <nav className="navbar navbar-light bg-light static-top">
+            <nav className="navbar navbar-light static-top">
                 <div className="container">
-                    <a className="navbar-brand" href="#!">Ben Bunu İzledim!</a>
+                   <div > <Link className='navbar-brand' to={"/"}>Ben Bunu İzledim!</Link></div>
                     <div className='brand'>
-                        <Link to={"/"}>İzlenecekler</Link>
+                        <Link to={"/WatchList"}>İzlenecekler</Link>
                     </div>
                     <ul className='nav-links'>
                         <li>
