@@ -24,9 +24,9 @@ const WatchList = () => {
             <div className="row cards-row">
               {watchList.map((movie) => (
 
-                <div className="cards col-lg-3 border border-secondary rounded m-4 p-3 ">
+                <div className="cards col border border-secondary rounded m-4 p-3 ">
                   <div className="card-body">
-                    <div className="text-center">
+                    <div key={movie.id} className="text-center">
                       <h5 className="fw-bolder">{movie.title}</h5>
                       <h6 className="text-muted fst-italic  mb-2">IMDB: {movie.vote_average}</h6>
                     </div>

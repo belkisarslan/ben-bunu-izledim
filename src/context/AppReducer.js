@@ -7,5 +7,10 @@ export default (state, action) => {
             }
             default:
                 return state;
+        case "ADD_MOVİE_TO_WATCHED":
+            return{
+                ...state,
+                watched:[...state.watched, action.payload]
+            }
     }
 }

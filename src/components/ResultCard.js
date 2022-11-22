@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
 const ResultCard = ({ movie }) => {
-  const{addMovieToWatchList} = useContext(GlobalContext)
+  const{addMovieToWatchList, addMovieToWatched} = useContext(GlobalContext)
   const style = {
     display: "flex",
     marginTop: "50px"
@@ -28,7 +28,7 @@ const ResultCard = ({ movie }) => {
 
       <div className="d-flex justify-content-between card-footer p-4 pt-0 border-top-0 bg-transparent">
         <div>
-          <button className="btn btn-outline-dark mt-auto" href="#">İzledim</button>
+          <button onClick={()=>addMovieToWatched(movie)} className="btn btn-outline-dark mt-auto" href="#">İzledim</button>
         </div>
         <div>
           <button onClick={()=>addMovieToWatchList(movie)} className="btn btn-outline-secondary mt-auto">İzleyeceğim</button>
