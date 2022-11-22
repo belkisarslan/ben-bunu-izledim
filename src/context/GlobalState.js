@@ -5,14 +5,15 @@ export const GlobalContext = createContext()
 
 const initialState = {
   watchList: localStorage.getItem("watchList") ? JSON.parse(localStorage.getItem("watchList")) : [],
-  watched: []
+  watched: localStorage.getItem("watched") ? JSON.parse(localStorage.getItem("watched")) : []
 }
 
 export const GlobalProvider =(props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState)
 
   useEffect(() => {
-    localStorage.setItem("watchList", JSON.stringify(state.watchList))
+    localStorage.setItem("watchList", JSON.stringify(state.watchList));
+    localStorage.setItem("watched",JSON.stringify(state.watched))
   }, [state])
   
   
