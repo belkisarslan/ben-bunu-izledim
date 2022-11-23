@@ -18,13 +18,13 @@ const Watched = () => {
           </div>
         </div>
       </header>
-      <section className="features-icons bg- light text-center d-flex justify-content-around ">
-        <div>
+      <section className="features-icons bg-light text-center">
+        <div className='container'>
           {watched.length > 0 ? (
-            <div className="row cards-row">
+            <div className="row">
               {watched.map((movie) => (
 
-                <div key={movie.id} className="cards col border border-secondary rounded m-4 p-3 ">
+                <div key={movie.id} className="cards col-lg-3 border border-secondary rounded m-4 p-3 ">
                   <div className="card-body">
                     <div className="text-center">
                       <h5 className="fw-bolder">{movie.title}</h5>
