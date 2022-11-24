@@ -3,7 +3,7 @@ import { GlobalContext } from '../context/GlobalState'
 import "../App.css"
 
 const Watched = () => {
-  const { watched } = useContext(GlobalContext)
+  const { watched, deleteMovie } = useContext(GlobalContext)
   const style = {
     display: "flex",
     marginTop: "50px"
@@ -25,6 +25,9 @@ const Watched = () => {
               {watched.map((movie) => (
 
                 <div key={movie.id} className="cards col-lg-3 border border-secondary rounded m-4 p-3 ">
+                  <div className='inner-card-control'>
+                  <button onClick={() => deleteMovie(movie)} className='btn btn-danger'>Sil</button>
+                  </div>
                   <div className="card-body">
                     <div className="text-center">
                       <h5 className="fw-bolder">{movie.title}</h5>

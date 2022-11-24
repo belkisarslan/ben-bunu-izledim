@@ -19,6 +19,16 @@ export default (state, action) => {
                 ),
                 watched: [...state.watched, action.payload]
             };
+        case "DELETE_MOVİE":
+            return{
+                ...state,
+                watchList: state.watchList.filter(
+                    (movie) => movie.id !== action.payload.id
+                ),
+                watched: state.watched.filter(
+                    (movie) => movie.id !== action.payload.id
+                )
+            }
     default:
         return state;    
     }

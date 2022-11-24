@@ -168,3 +168,7 @@ header.masthead {
   .inner-card-control .btn-primary{
     background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
   }
+
+  .inner-card-control .btn-danger{
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  }
